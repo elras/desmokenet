@@ -1,8 +1,8 @@
 
-Run test.py in /test_code (not optimal demo code).  
-It requires Caffe fremework.   
+Run test.py in /test_code (not optimal demo code)
+It requires the Caffe framework (tested with Caffe CUDA 8.0 and Ubuntu 16.04)
   
-  
+
 #### An example: Right half is enhanced by our method.
 ![alt text][gif]
 
