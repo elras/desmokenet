@@ -14,15 +14,15 @@ For a dirty demo, first install Anaconda then create a desmokenet environment
     
     $ conda create -n desmokenet
 
-Install cpu-only pycaffe by in a dirty way by
+Install cpu-only pycaffe by (better not to use other channels: https://github.com/conda-forge/caffe-feedstock/issues/31)
 
     $ conda install -c defaults caffe -n desmokenet
 
-Simply run inside /test_code
+Simply run fallowing inside /test_code
 
-    $ conda install -c defaults caffe -n desmokenet
+    $ python test.py
     
-From the input images at data/img, output images will appear at data/result. The network is also tested with compiled Caffe framework in a Ubuntu 16.04 system with CUDA 8.0. Note that, this code is just for demo purposes and may not show the performance stated in the paper. 
+From the input images at data/img, output images will appear at data/result. The network is also tested with compiled Caffe framework in Ubuntu 16.04 system with CUDA 8.0. Note that, this code is just for demo purposes and may not show the performance stated in the paper. 
 
 ### Citing
 
