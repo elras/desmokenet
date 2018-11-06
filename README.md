@@ -4,7 +4,7 @@
 We employed transfer learning and reached state of the art performance in automatic smoke removal from image-guided surgery videos. 
 
 <div align="center">
-  <img src="/videos/example1.gif" width="500" height="300"><br>
+  <img src="/videos/example1.gif" width="400" height="300"><br>
 </div>
 
 
