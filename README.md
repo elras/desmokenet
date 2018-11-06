@@ -1,20 +1,44 @@
 
-Run test.py in /test_code, it is not optimal and just for demo purposes  
-The code requires the Caffe framework (tested with Caffe CUDA 8.0 and Ubuntu 16.04)  
-  
+## Real-time Surgery Smoke Removal by Deep Learning
 
-#### An example: Right half is enhanced by our method.
-![alt text][gif]
+We employed transfer learning and reached state of the art performance in automatic smoke removal from image-guided surgery videos. 
 
-[gif]:/videos/example1.gif
+<div align="center">
+  <img src="/videos/example1.gif" width="500"><br>
+</div>
 
 
-	@InProceedings{Bolkar_2018_ICIP,
-	author = {Bolkar, Sabri, and Wang, Congcong and Cheikh, Faouzi Alaya and Yildirim, Sule},
-	title = {Deep Smoke Removal from Minimally Invasive Surgery Videos},
-	booktitle = {IEEE International Conference on Image Processing (ICIP)},
-	month = {September},
-	year = {2018}
-	}
+### Quick Demo
 
+For a dirty demo, first install Anaconda then create a desmokenet environment
+    
+    $ conda create -n desmokenet
+
+Install cpu-only pycaffe by in a dirty way by
+
+    $ conda install -c defaults caffe -n desmokenet
+
+Simply run inside /test_code
+
+    $ conda install -c defaults caffe -n desmokenet
+    
+From the input images at data/img, output images will appear at data/result. The network is also tested with compiled Caffe framework in a Ubuntu 16.04 system with CUDA 8.0. Note that, this code is just for demo purposes and may not show the performance stated in the paper. 
+
+### Citing
+
+S. Bolkar, C. Wang, F. A. Cheikh and S. Yildirim, "Deep Smoke Removal from Minimally Invasive Surgery Videos," _2018 25th IEEE International Conference on Image Processing (ICIP)_, Athens, Greece, 2018, pp. 3403 3407.   doi: 10.1109/ICIP.2018.8451815  
+
+	@INPROCEEDINGS{bolkar2018,  
+		author={S. Bolkar and C. Wang and F. A. Cheikh and S. Yildirim},  
+		booktitle={2018 25th IEEE International Conference on Image Processing (ICIP)},  
+		title={Deep Smoke Removal from Minimally Invasive Surgery Videos},  
+		year={2018},  
+		pages={3403-3407},  
+		doi={10.1109/ICIP.2018.8451815},  
+		ISSN={2381-8549},  
+		month={Oct},}
+
+### References
+
+Our fast implementation is based on AOD-Net, please check their work at: https://arxiv.org/abs/1707.06543 
 

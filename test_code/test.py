@@ -23,15 +23,15 @@ import datetime
 def EditFcnProto(templateFile, height, width):
 	with open(templateFile, 'r') as ft:
 		template = ft.read()
-        print templateFile
-        outFile = 'DeployT.prototxt'
-        with open(outFile, 'w') as fd:
-            fd.write(template.format(height=height,width=width))
+        #print templateFile
+	outFile = 'DeployT.prototxt'
+	with open(outFile, 'w') as fd:
+		fd.write(template.format(height=height,width=width))
 
 def test():
-    caffe.set_mode_gpu()
-    caffe.set_device(0)
-    #caffe.set_mode_cpu();
+    #caffe.set_mode_gpu()
+    #caffe.set_device(0)
+    caffe.set_mode_cpu();
 
     info = os.listdir('../data/img/');
     imagesnum=0;
@@ -73,9 +73,9 @@ def test():
                 savepath = '../data/result/' + imagename + '.png'
                 #cv2.imwrite(savepath, data * 255.0,[cv2.IMWRITE_JPEG_QUALITY, 100])
                 cv2.imwrite(savepath, data * 255.0)
-                print imagename
+                #print imagename
 
-        print 'image numbers:',imagesnum;
+        #print 'image numbers:',imagesnum;
 
 def main():
     test()
