@@ -1,5 +1,5 @@
 
-## Real-time Surgery Smoke Removal by Deep Learning
+## Deep Smoke Removal from Minimally Invasive Surgery Videos
 
 We employed transfer learning and reached state of the art performance in automatic smoke removal from image-guided surgery videos. 
 
