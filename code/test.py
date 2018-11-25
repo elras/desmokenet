@@ -53,7 +53,7 @@ def test():
                 EditFcnProto(templateFile, height, width)
 
 
-                model='../train_1/model_iter_40000.caffemodel';
+                model='../model/model_iter_40000.caffemodel';
 
                 net = caffe.Net('DeployT.prototxt', model, caffe.TEST);
                 batchdata = []
