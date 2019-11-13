@@ -1,4 +1,4 @@
-name:"desmokenet"
+name:"Desmokenet"
 input: "data"
 input_dim: 1
 input_dim: 3
@@ -12,10 +12,28 @@ input_dim: {height}
 input_dim: {width}
 
 
+layer {{
+  name: "conv1"
+  type: "Convolution"
+  bottom: "data"
+  top: "conv1"
+  convolution_param {{
+    num_output: 3
+    kernel_size: 1
+  }}
+}}
+
+layer {{
+   name: "relu1"
+   type: "ReLU"
+   bottom: "conv1"
+   top: "conv1"
+ }}
+
  layer {{
   name: "conv2"
   type: "Convolution"
-  bottom: "data"
+  bottom: "conv1"
   top: "conv2"
   convolution_param {{
     num_output: 3
@@ -34,7 +52,7 @@ layer {{
 layer {{
   name: "Concat1"
   type: "Concat"
-  bottom: "data"
+  bottom: "conv1"
   bottom: "conv2"
   top: "Concat1"
   concat_param {{
@@ -90,7 +108,7 @@ layer {{
  layer {{
   name: "Concat3"
   type: "Concat"
-  bottom: "data"
+  bottom: "conv1"
   bottom: "conv2"
   bottom: "conv3"
   bottom: "conv4"
