@@ -1,7 +1,7 @@
 
 ## Deep Smoke Removal from Minimally Invasive Surgery Videos
 
-We employed transfer learning, and reached state of the art performance and speed in automatic smoke removal from image-guided surgery videos (right-half enhanced by our method). The model is extremely lightweight and can be easily used in mobile environemnts:
+We employed transfer learning, and reached state of the art performance and speed in automatic smoke removal from image-guided surgery videos (right-half enhanced by our method). The model is extremely lightweight and can be easily used in mobile devices:
 
 <div align="center">
   <img src="/videos/example1.gif" width="400" height="300"><br>
